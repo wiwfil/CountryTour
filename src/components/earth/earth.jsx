@@ -35,13 +35,14 @@ const Earth = ({ setTooltipContent }) => {
       const searchBox = document.getElementById("search-box");
       if (searchBox) {
         searchBox.value = "";
+        setSearch("");
       }
     }
 
-    setSearch("");
+
     name = name.toLowerCase();
 
-    countries?.map((country, index) => {
+    countries?.map((country) => {
       if (
         country.name.official.toLowerCase() === name ||
         country.name.common.toLowerCase() === name
@@ -79,19 +80,19 @@ const Earth = ({ setTooltipContent }) => {
     axios.get("https://restcountries.com/v3.1/all").then((data) => {
       setRawData(data.data);
       setIsLoading(false);
-      // let initialCountry = data.data[188];
-      // setName(initialCountry.name.common);
-      // setFlag(initialCountry.flags.png);
-      // setOfficialName(initialCountry.name.official);
-      // setLanguages(initialCountry.languages);
-      // setRegion(initialCountry.region);
-      // setCapital(initialCountry.capital);
-      // setPopulation(initialCountry.population);
-      // setMaps(initialCountry.maps.googleMaps);
-      // setIndependent(initialCountry.independent);
-      // setCurrency(initialCountry.currencies);
-      // setBorders(initialCountry.borders);
-      // setArea(initialCountry.area);
+      let initialCountry = data.data[188];
+      setName(initialCountry.name.common);
+      setFlag(initialCountry.flags.png);
+      setOfficialName(initialCountry.name.official);
+      setLanguages(initialCountry.languages);
+      setRegion(initialCountry.region);
+      setCapital(initialCountry.capital);
+      setPopulation(initialCountry.population);
+      setMaps(initialCountry.maps.googleMaps);
+      setIndependent(initialCountry.independent);
+      setCurrency(initialCountry.currencies);
+      setBorders(initialCountry.borders);
+      setArea(initialCountry.area);
     });
   }, []);
 
