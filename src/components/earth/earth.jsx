@@ -81,7 +81,7 @@ const Earth = ({ setTooltipContent }) => {
       setRawData(data.data);
       setIsLoading(false);
       let initialCountry = data.data[188];
-      setName(initialCountry.name.common);
+      setName(initialCountry.name.common.toLowerCase());
       setFlag(initialCountry.flags.png);
       setOfficialName(initialCountry.name.official);
       setLanguages(initialCountry.languages);
