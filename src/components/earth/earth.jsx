@@ -43,10 +43,13 @@ const Earth = ({ setTooltipContent }) => {
     name = name.toLowerCase();
 
     countries?.map((country) => {
+      console.log(name);
+      console.log(country.name.official,"--",country.name.common);
       if (
         country.name.official.toLowerCase() === name ||
-        country.name.common.toLowerCase() === name
+        country.name.common.toLowerCase() === name || (country.name.common.toLowerCase() === "north macedonia" && name === "macedonia")
       ) {
+        
         setName(name);
         setFlag(country.flags.png);
         setOfficialName(country.name.official);
@@ -196,6 +199,8 @@ const Earth = ({ setTooltipContent }) => {
                           key={geo.rsmKey}
                           geography={geo}
                           onClick={() => {
+      
+                            
                             setCountryInfo(geo.properties.name, true);
                           }}
                           onMouseEnter={() => {
@@ -244,7 +249,7 @@ const Earth = ({ setTooltipContent }) => {
             <div className="pair">
               <label className="key">Independence:</label>
               <span className="value">
-                {independent === true ? "independent" : "dependent"}
+                {independent === true ? "independent" : ""}
               </span>
             </div>
 
