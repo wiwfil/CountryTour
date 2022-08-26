@@ -266,7 +266,7 @@ const Earth = ({ setTooltipContent }) => {
             </div>
             <div className="pair">
               <label className="key">Area:</label>
-              <span className="value">{areax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
+              <span className="value">{area.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
             </div>
           </div>
         </div>
