@@ -1,13 +1,164 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  margin: 0;
+  font-family: 'Kalam', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(30deg, #0D7377 20%, #114296 100%);
+  background-repeat:no-repeat;background-size:cover;
+  
+}
+
+
+.earth-container{
+  height: 100%;
+  
+  display: grid;
+  align-items:start;
+  padding:0px 10px 0 10px;
+  grid-template-columns: 3fr 5fr 3fr;
+  gap:10px;
+  
+}
+
+.earth-column{
+  background-color:#323232;
+  border-radius:12px;
+  display:flex;
+  justify-content:flex-start;
+  align-items: flex-start;
+  padding: 10px;
+  gap:60px;
+  flex-direction: column;
+  
+
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.71);
+-moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.71);
+box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.71);
+}
+
+.pair{
+  display:flex;
+  gap:5px;
+
+}
+.earth-flag{
+  height:32px;
+}
+
+.common-name{
+margin-left:5px;
+font-size: 24px;
+text-transform: uppercase;
+color:#14FFEC;
+}
+
+.key{
+  letter-spacing: 2px;
+  text-transform:capitalize;
+  font-size: 14px;
+  text-align:start;
+  color: #14FFEC;
+}
+.value{
+  letter-spacing: 2px;
+  font-size: 14px;
+text-transform: capitalize;
+color:#fff;
+}
+.header{
+  width: 100%;
+background:none;
+font-weight: 600;
+padding-top:5px;
+font-size: 48px;
+text-align: center;
+color:white;
+display:flex;
+gap:10px;
+justify-content:center;
+align-items:center;
+
+}
+.footer{
+  width: 100%;
+  padding:05px 0px 5px 0px;
+background-color:#323232;
+  bottom:0;
+  text-align: center;
+  font-size: 12px;
+  color:white;
+}
+a {
+  color:#fff;
+margin:auto 0 ;
+}
+
+.main-content{
+  align-items: center;
+  text-align: center;
+}
+
+.zoom{
+  cursor:pointer;
+  border-radius: 3px;
+  width:30px;
+  font-size:24px;
+  background-color: #323232;
+  color:white;
+  text-align: center;
+  border:none;
+}
+
+.zoom-elements{
+  position:absolute;
+  right:5px;
+  top: 5px;
+  z-index: 150;
+  display: flex;
+  gap:1px;
+}
+input {
+  font-family: 'Kalam', cursive;
+  margin-top:5px;
+  margin-bottom: 10px;
+  padding:2px 8px;
+  background:none;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 12px;
+  outline: 4px solid #323232;
+  border: none;
+  position: relative;
+}
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+  color:white;
+  opacity: .75; /* Firefox */
+}
+.column-head{
+margin:0 auto;
+}
+.wrapper{
+  position:relative;
+}
+.loading{
+  font-size:50px;
+  margin:auto auto;
+}
+
+.icon{
+  height:60px;
 }
