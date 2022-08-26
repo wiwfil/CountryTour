@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
 
 html,
 body,
@@ -12,7 +12,7 @@ body,
 
 body {
   margin: 0;
-  font-family: 'Kalam', cursive;
+  font-family: 'Signika', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(30deg, #0D7377 20%, #114296 100%);
@@ -130,7 +130,7 @@ margin:auto 0 ;
   gap:1px;
 }
 input {
-  font-family: 'Kalam', cursive;
+  font-family: 'Signika', sans-serif;
   margin-top:5px;
   margin-bottom: 10px;
   padding:2px 8px;
