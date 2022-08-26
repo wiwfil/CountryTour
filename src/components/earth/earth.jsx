@@ -41,10 +41,10 @@ const Earth = ({ setTooltipContent }) => {
 
 
     name = name.toLowerCase();
+    name = name==="north macedonia" ? "macedonia" : name;
 
     countries?.map((country) => {
-      console.log(name);
-      console.log(country.name.official,"--",country.name.common);
+
       if (
         country.name.official.toLowerCase() === name ||
         country.name.common.toLowerCase() === name || (country.name.common.toLowerCase() === "north macedonia" && name === "macedonia")
@@ -104,7 +104,7 @@ const Earth = ({ setTooltipContent }) => {
       rawData?.filter(
         (country) =>
           country.name.common.toLowerCase().includes(search) ||
-          country.name.official.toLowerCase().includes(search)
+          country.name.official.toLowerCase().includes(search) 
       )
     );
     setCountryInfo(
