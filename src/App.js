@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import Earth from "./components/earth/earth.jsx";
 import ReactTooltip from "react-tooltip";
 import Header from "./components/header/Header";
