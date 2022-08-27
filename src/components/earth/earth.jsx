@@ -127,7 +127,7 @@ const Earth = ({ setTooltipContent }) => {
     <>
       {!isLoading ? (
         <div className="earth-container" data-tip="">
-          <div className="earth-column">
+          <div className="earth-column column-left">
             <div className="pair column-head">
               <img className="earth-flag" src={flag} alt="flag"></img>
               <span className="common-name">{name}</span>
@@ -158,7 +158,7 @@ const Earth = ({ setTooltipContent }) => {
               <span className="value">{population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
             </div>
           </div>
-          <div className="main-content">
+          <div className="main-content grid-item">
             <input
               id="search-box"
               type="text"
@@ -178,6 +178,7 @@ const Earth = ({ setTooltipContent }) => {
                 </button>
               </div>
               <ComposableMap
+              className="map"
                 style={{
                   width: "100%",
                   height: "",
@@ -238,7 +239,7 @@ const Earth = ({ setTooltipContent }) => {
               </ComposableMap>
             </div>
           </div>
-          <div className="earth-column">
+          <div className="earth-column column-right">
             <div className="pair">
               <label className="key">Maps:</label>
               <a href={maps} className="link">

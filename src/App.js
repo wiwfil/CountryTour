@@ -9,7 +9,7 @@ function App() {
   const [content, setContent] = useState("");
 
   return (
-    <div className="app">
+    <>
       <Header />
       <>
         <Earth setTooltipContent={setContent} />
@@ -17,7 +17,7 @@ function App() {
       </>
 
       <Footer />
-    </div>
+    </>
   );
 }
 
